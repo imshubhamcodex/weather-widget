@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather App</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+	<header id="header" class="top">
+		<h1 style="font-weight: 300;">Weather-Widget</h1>
+	</header><!-- /header -->
+	<main>	
+		<div class="box1">
+				<input id="search-box" type="text" placeholder="Enter zip Code or Name">
+				<i id="search-img" class="fa fa-search" onclick="searchData()"></i>
+		</div>
+		<div class="box2">
+			<h2 id="city">City name</h2>
+			<h3 id="temp">Temp</h3>
+			<h3 id="temp0"></h3>
+		</div>
+		<div class="box3">
+			<h1 id="Today">Day</h1>
+			<h1 id="time">Time</h1>
+			<h2 id="humidity">Humidity</h2>
+			<h3 id="wind">Wind</h3>
+			<h3 id="des">description</h3>
+		</div>
+		<div class="box4">
+			<table>
+					<tr>
+						<th id="th1">header</th>
+						<th id="th2">header</th>
+						<th id="th3">header</th>
+						<th id="th4">header</th>
+						<th id="th5">header</th>	
+					</tr>
+					<tr>
+						<td id="td1">data</td>
+						<td id="td2">data</td>
+						<td id="td3">data</td>
+						<td id="td4">data</td>
+						<td id="td5">data</td>
+					</tr>
+					<tr>
+						<td id="td21">data</td>
+						<td id="td22">data</td>
+						<td id="td23">data</td>
+						<td id="td24">data</td>
+						<td id="td25">data</td>	
+					</tr>
+			</table>
+		</div>
+	</main>
+
+	<script>
+		// var tl = gsap.timeline()
+			gsap.from('#header',1,{opacity:0,ease:Power4.easeInOut,y:-30})
+			gsap.from('.box1',1.2,{opacity:0,ease:Power3.easeInOut,y:-20})
+			gsap.from('.box2',1.7,{opacity:0,ease:Power2.easeInOut,y:-40})
+			gsap.from('.box3',2.1,{opacity:0,ease:Power2.easeInOut,y:-50})
+			gsap.from('.box4',2.4,{opacity:0,ease:Power1.easeInOut,y:-60})
+	</script>		
+
+</body>
+</html>
